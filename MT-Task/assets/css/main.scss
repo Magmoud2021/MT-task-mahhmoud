@@ -1,0 +1,24 @@
+// @import 'var';
+body {
+  font-family: 'Montserrat', sans-serif;
+  
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*,
+*:focus,
+*:hover {
+  outline: none !important;
+}
+
+.container {
+  @media screen and (min-width: 767px) {
+    width: 95%;
+    max-width: 1300px;
+  }
+}
+
