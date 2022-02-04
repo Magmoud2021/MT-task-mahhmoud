@@ -1,0 +1,22 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:focus,
+*:hover {
+  outline: none !important;
+}
+
+@media screen and (min-width: 767px) {
+  .container {
+    width: 95%;
+    max-width: 1300px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

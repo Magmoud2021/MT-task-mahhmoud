@@ -1,0 +1,38 @@
+$colors: ( accent: #13438e, lightAccent: #045dad, _gray: #6f6f6f, dark_gray: #4f4f4f, light_gray: #d8d8d8, );
+$fontSize: ( font_large: 40px, font_semi_large: 25px, font_medium: 18px, font_semi_medium: 16px, font_normal: 14px, );
+$border: 2px solid rgba(19, 67, 142, 0.5);
+$padding: calc((100% - 1300px) / 2);
+.textXl__family {
+    color: #fff;
+    font-size: map-get($fontSize, font_large);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.textLg__family {
+    color: map-get($colors, accent);
+    font-size: map-get($fontSize, font_semi_large);
+    font-weight: 600;
+    line-height: 1.22;
+}
+
+.textMd__family {
+    color: #fff;
+    font-size: map-get($fontSize, font_medium);
+    // font-weight: 500;
+    line-height: 1.6;
+}
+
+.textSm__family {
+    color: map-get($colors, dark_gray);
+    font-size: map-get($fontSize, font_semi_medium);
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+.textXs__family {
+    color: map-get($colors, dark_gray);
+    font-size: map-get($fontSize, font_normal);
+    font-weight: normal;
+    line-height: 2;
+}
