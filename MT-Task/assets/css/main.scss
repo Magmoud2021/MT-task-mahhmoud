@@ -1,7 +1,7 @@
-// @import 'var';
+@import 'var';
 body {
   font-family: 'Montserrat', sans-serif;
-
+height: 5000px;
 
 }
 
@@ -20,6 +20,728 @@ body {
   @media screen and (min-width: 767px) {
     width: 95%;
     max-width: 1300px;
+  }
+}
+img {
+  object-fit: cover;
+  object-position: top;
+}
+
+figure {
+  margin-bottom: 0;
+  img {
+    width: 100%;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.active-link,
+.exact-active-link {
+  color: #045dad !important;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.success-message {
+  width: 300px;
+  height: 60px;
+  background: map-get($colors, accent);
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 85px;
+  left: 0;
+  z-index: 2;
+}
+
+.text-black {
+  color: #000;
+}
+
+.btn-main {
+  display: inline-block;
+  margin-right: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #045dad;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  border: 2px solid #045dad;
+  overflow: hidden;
+  position: relative;
+  transition: all linear 0.3s;
+  @media (max-width: 768px) {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #045dad;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all linear 0.3s;
+  }
+  &:hover {
+    color: #fff;
+    span {
+      width: 200%;
+      height: 200%;
+      z-index: -1;
+    }
+  }
+}
+
+.our-doctors__pagination {
+  bottom: 18px !important;
+}
+
+.stories__pagination {
+  bottom: -45px !important;
+}
+
+.splide {
+  width: 100%;
+}
+
+.our-services__pagination {
+  bottom: -2.5em !important;
+}
+
+.our-doctors__pagination .splide__pagination__page,
+.stories__pagination .splide__pagination__page,
+.our-services__pagination .splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(163, 163, 163, 0.7) !important;
+}
+
+.splide-pagination-fraction,
+.splide-pagination-custom {
+  bottom: 20px !important;
+}
+
+.dark-mode {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.zoom-minus {
+  font-size: smaller !important;
+}
+
+.general-input {
+  min-height: 80px;
+  display: block;
+  transition: all ease-in-out 0.3s;
+  input {
+    width: 100%;
+    min-height: 50px;
+    display: block;
+    border: 1px solid transparent;
+    outline: none;
+    padding-left: 1rem;
+    color: #045dad;
+    border-radius: 0.3rem;
+    transition: all ease-in-out 0.3s;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+    &:focus {
+      border: 1px solid #045dad;
+    }
+  }
+}
+
+.contact-text-area {
+  width: 100%;
+  display: block;
+  min-height: 180px;
+  transition: all ease-in-out 0.3s;
+  textarea {
+    width: 100%;
+    padding: 1rem 0 0 1rem;
+    outline: none;
+    min-height: 140px;
+    transition: all ease-in-out 0.3s;
+    border: 1px solid transparent;
+    &:focus {
+      border: 1px solid #045dad;
+    }
+  }
+}
+
+.send-btn {
+  border: none;
+  outline: none;
+  background-color: #000;
+  width: 200px;
+  height: 60px;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  display: block;
+  border-radius: 0.3rem;
+  transition: all ease-in-out 0.3s;
+  .btn-border {
+    border: 1px solid #f5f5f5;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+}
+
+.send-btn:disabled {
+  background-color: rgba(64, 62, 60, 0.9);
+  pointer-events: none;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: map-get($colors, accent);
+}
+
+.about-item {
+  margin: 3rem 0;
+  img {
+    display: block;
+    width: 35px;
+    height: 47px;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+  .count {
+    display: block;
+    color: #045dad;
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+  .item-description {
+    color: #3d505d;
+    font-weight: 600;
+    letter-spacing: 0.21px;
+    margin: 0;
+  }
+}
+
+.about-us-header {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: map-get($colors, dark_gray);
+}
+
+.about-us-description {
+  color: #737373;
+  line-height: 1.87;
+  font-size: 1.2rem;
+}
+
+.about-us-content {
+  position: relative;
+  width: 92%;
+  margin-left: auto;
+  height: 100%;
+  .btn-main {
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    &:hover {
+      background-color: #045dad;
+      color: #fff;
+    }
+    @media (max-width: 1080px) {
+      position: relative;
+    }
+  }
+  @media (max-width: 1080px) {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+//contact us
+.dash-heading {
+  margin: 3rem 0 1.5rem 0;
+  color: map-get($colors, dark_gray);
+  text-transform: capitalize;
+  font-weight: bold;
+  &::after {
+    content: '';
+    width: 23%;
+    display: block;
+    height: 3px;
+    border-radius: 0.3rem;
+    background: #045dad;
+    margin-top: 1.5rem;
+  }
+}
+
+.about-section {
+  width: 97%;
+  border-left: 1px solid #93a19b;
+  margin-left: auto;
+  padding-left: 2rem;
+  line-height: 2;
+}
+
+.sub-info {
+  text-decoration: none;
+  color: #4a4a4aab;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  &:hover {
+    color: map-get($colors, dark_gray);
+    transition: all ease-in-out 0.3s;
+  }
+  @media (max-width: 992px) {
+    font-size: 0.8rem;
+  }
+}
+
+.header-info {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.heading-booking,
+.sub-heading-booking {
+  text-transform: capitalize;
+  font-weight: bolder;
+  color: #3d505d;
+  margin-bottom: 1rem;
+}
+
+.sub-heading-booking {
+  @extend .textXs__family;
+  margin: 0;
+  line-height: 1;
+  font-weight: normal;
+  color: map-get($colors, accent);
+  @media (max-width: 992px) {
+    margin-top: 5px;
+  }
+}
+
+.sub-heading-search {
+  color: transparent;
+}
+
+.select-option {
+  display: block;
+  width: 95%;
+  border: unset;
+  padding: 0.5rem 0;
+  color: map-get($colors, accent);
+  font-weight: bold;
+  transform: translate(20px, 5px);
+  &:lang(ar) {
+    transform: translate(-20px, 5px);
+  }
+}
+
+.search-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: map-get($colors, accent);
+  border: 1px solid transparent;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  text-transform: capitalize;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0.2rem;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  &:hover {
+    border-color: map-get($colors, lightAccent);
+    background: map-get($colors, lightAccent);
+  }
+  &:lang(ar) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  @media screen and (max-width: 992px) {
+    border-radius: 15px !important;
+    padding: 15px 20px;
+  }
+}
+
+// doctor card
+.doctor-card {
+  display: block;
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  transition: all linear 0.3s;
+  box-shadow: 0 0 5px 0 rgba(34, 31, 31, 0.24);
+  .doctor-name {
+    text-align: center;
+    color: map-get($colors, dark_gray);
+    font-size: 1.3rem;
+    font-weight: bolder;
+    text-transform: capitalize;
+    margin: 0.5rem 0 0.2rem 0;
+  }
+  .hold-doctor-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    margin: 1rem auto;
+    border: solid 0.5px rgba(219, 219, 219, 0.5);
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .doctor-specialty {
+    color: #045dad;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+  }
+  .doctor-address {
+    color: #737373;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+  .book-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    text-transform: capitalize;
+    color: #045dad;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    border: 2px solid #045dad;
+    width: 50%;
+    margin: 1rem auto;
+    transition: all linear 0.3s;
+    @media (max-width: 992px) {
+      width: 60%;
+    }
+    &:hover {
+      background: #045dad;
+      color: #fff;
+    }
+  }
+  &:hover {
+    transform: scale(1.1111);
+    background: #f1f6fa;
+  }
+  @media (max-width: 992px) {
+    width: 85%;
+  }
+}
+
+iframe {
+  width: 100% !important;
+}
+
+.hold-buttons {
+  margin: 1.5rem auto;
+}
+
+.btn-green {
+  border: 2px solid transparent;
+  background: map-get($colors, accent);
+  color: #fff;
+  &:hover {
+    border: 2px solid map-get($colors, accent);
+    background: map-get($colors, accent);
+    color: #fff;
+  }
+}
+
+.contact-us {
+  color: #707070;
+  .contact-us-paragraph {
+    line-height: 1.88;
+  }
+}
+
+.hold-booking {
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  z-index: 22;
+}
+
+// arabic version
+html:lang(ar) {
+  body {
+    text-align: right;
+  }
+  .about-us-header {
+    text-align: right;
+  }
+  .about-us-description {
+    color: #737373;
+    line-height: 1.87;
+    font-size: 1.2rem;
+    text-align: right;
+  }
+  .about-us-content {
+    margin-right: auto;
+    .btn-main {
+      left: auto;
+      right: 0;
+    }
+  }
+  .dash-heading {
+    text-align: right;
+  }
+  .about-section {
+    width: 97%;
+    border-right: 1px solid #93a19b;
+    border-left: none;
+    margin-right: auto;
+    padding-right: 2rem;
+    padding-left: 0;
+  }
+  .general-input {
+    min-height: 80px;
+    display: block;
+    transition: all ease-in-out 0.3s;
+    input {
+      padding-left: 0;
+      padding-right: 1rem;
+    }
+  }
+  .contact-text-area {
+    textarea {
+      width: 100%;
+      padding: 1rem 1rem 0 0;
+    }
+  }
+  .phone-ar {
+    display: inline-flex;
+    direction: ltr;
+  }
+}
+
+p {
+  @extend .textSm__family;
+  margin: 0 0 12px;
+  font-weight: normal;
+}
+
+.title {
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: map-get($colors, dark_gray);
+  }
+  hr {
+    width: 70px;
+    height: 4px;
+    background-color: map-get($colors, accent);
+    max-width: 70px;
+    margin: 0;
+    opacity: 1;
+  }
+  p {
+    font-size: 15px;
+    color: #707070;
+    font-weight: 500;
+  }
+}
+
+.title:lang(ar) {
+  text-align: right;
+}
+
+select::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+
+select::-webkit-scrollbar-thumb {
+  background-color: map-get($colors, accent);
+}
+
+select select::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+.video-wrapper {
+  @media screen and (max-width: 767px) {
+    iframe {
+      width: 100% !important;
+    }
+  }
+}
+
+.our-doctors .splide__track {
+  padding: 20px 0;
+}
+
+a,
+button {
+  text-decoration: none;
+  background: unset;
+  border: unset;
+  box-shadow: unset;
+  transition: 0.3s all ease-out;
+}
+
+//offer page
+.offer_description {
+  color: #fff;
+}
+
+.booking {
+  .row {
+    @media screen and (max-width: 767px) {
+      margin: 0;
+    }
+  }
+  &__fieldset {
+    padding: 15px;
+    border: $border;
+    @media screen and (max-width: 992px) {
+      border-radius: 15px !important;
+      margin-bottom: 15px;
+    }
+    &--radius {
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      &:lang(ar) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+    }
+    &--bx0 {
+      @media screen and (min-width: 992px) {
+        border-left: unset;
+        border-right: unset;
+      }
+    }
+  }
+  &__selectWrapper {
+    position: relative;
+  }
+  &__icon {
+    position: absolute;
+    top: 15px;
+    color: map-get($colors, accent);
+    &--search {
+      position: relative;
+      top: 0%;
+      left: -3%;
+      color: #fff;
+      font-size: 22px;
+    }
+  }
+  &__btn {
+    padding: 0;
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+  }
+}
+
+[class*='__pagination__page'] {
+  &.is-active {
+    background-color: map-get($colors, accent) !important;
+  }
+}
+
+.splide__arrow:not(.riskLayout .splide__arrow):not(.landing-page-layout
+    .splide__arrow) {
+  position: static !important;
+  transform: scale(0.6) !important;
+  fill: map-get($colors, _gray);
+}
+
+// temporary fix fox offers modal style
+#exampleModalLong {
+  .modal {
+    &-header {
+      all: unset;
+      > button {
+        position: absolute;
+        top: -5px;
+        right: 5px;
+        border: unset;
+        font-size: 30px;
+        background: transparent;
+        z-index: 9999;
+      }
+    }
+    &-body {
+      padding: 0;
+    }
+    &-content {
+      background-color: transparent;
+      border: unset;
+    }
   }
 }
 

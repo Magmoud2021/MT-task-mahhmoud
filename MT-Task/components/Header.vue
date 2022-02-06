@@ -1,5 +1,6 @@
 <template>
   <header class="header">
+    <TopHeader />
 
     <div class="header__container container">
       <div class="header__row row">
@@ -26,7 +27,7 @@
         >
           <div class="right d-flex align-items-center">
             <Btn :text="$t('mtPrograms')" :url="localePath('/mt-programs')" />
-            
+
 
             <form v-if="showForm" @submit.prevent="searchSubmit">
               <div class="header__search form-group">
@@ -58,7 +59,7 @@
                     '/%D8%A7%D9%84%D9%85%D8%AF%D9%88%D9%86%D8%A9'
                 "
                 :to="switchLocalePath('en')"
-                class="lang__text"
+                class="lang__text dico__line"
               >
                 <img
                   src="~/assets/images/lang-flags/ic_langauge.png"
@@ -70,7 +71,7 @@
               <nuxt-link
                 v-if="$i18n.locale !== 'ar'"
                 :to="switchLocalePath('ar')"
-                class="lang__text"
+                class="lang__text dico__line"
               >
                 <img
                   src="/assets/images/lang-flags/ic_langauge.png"
@@ -84,6 +85,8 @@
         </div>
       </div>
     </div>
+    <Menu />
+<FixedMenu />
 
 
   </header>
@@ -350,5 +353,8 @@ span {
     display: none;
     margin: 15px 0;
   }
+}
+.dico__line{
+  text-decoration: none;
 }
 </style>

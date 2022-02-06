@@ -34,13 +34,13 @@
             </div>
             <!-- Phone and mail -->
             <div class="col-12 col-lg-6 px-0 text-center my-1">
-              <a :href="'tel:' + Setting.hotline" class="menu menu--has-mr">
+              <a :href="'tel:' + Setting.hotline" class="menu menu--has-mr dico">
                 <i class="fas fa-phone menu__icon"></i>
 
                 <span class="menu__text">{{ Setting.hotline }}</span>
               </a>
 
-              <a :href="'mailto:' + Setting.email" class="menu menu--has-mr">
+              <a :href="'mailto:' + Setting.email" class="menu menu--has-mr  dico">
                 <i class="fas fa-envelope menu__icon"></i>
 
                 <span class="menu__text">{{ Setting.email }}</span>
@@ -464,5 +464,8 @@ body:lang(ar) {
       }
     }
   }
+}
+.dico{
+  text-decoration: none;
 }
 </style>

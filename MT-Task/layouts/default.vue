@@ -1,14 +1,20 @@
 <template>
+<section class="default-layout">
+  <Header />
 
     <nuxt />
+
+
+</section>
 
 </template>
 <script>
 
 export default {
+  name: 'DefaultLayout',
 
 }
 </script>
-<style lang="scss" scoped>
+<style  scoped>
 
 </style>
