@@ -74,7 +74,7 @@
                 class="lang__text dico__line"
               >
                 <img
-                  src="/assets/images/lang-flags/ic_langauge.png"
+                  src="~/assets/images/lang-flags/ic_langauge.png"
                   alt="Language Flag"
                 />
 

@@ -30,7 +30,7 @@
           >
             <ul class="navbar-nav">
               <li class="menu__item nav-item">
-                <nuxt-link class="menu__link nav-link" :to="aboutLink" exact>
+                <nuxt-link class="menu__link nav-link" to="/" exact>
                   {{ $t('about_us') }}
                 </nuxt-link>
               </li>
@@ -38,7 +38,7 @@
               <li class="menu__item nav-item">
                 <nuxt-link
                   class="menu__link nav-link"
-                  :to="localePath('/hospitals')"
+                 to="/"
                   exact
                   role="button"
                 >
@@ -50,7 +50,7 @@
                 <nuxt-link
                   id="navbarDropdownMenuLink"
                   class="menu__link nav-link dropdown-toggle"
-                  :to="localePath('/doctors')"
+                  to="/"
                   exact
                   role="button"
                   data-bs-toggle="dropdown"
@@ -66,7 +66,7 @@
                   <li>
                     <nuxt-link
                       class="dropdown-item"
-                      :to="localePath(`/doctors`)"
+                     to="/"
                       exact
                       >{{ $t('menu.andalusia_doctors') }}
                     </nuxt-link>
@@ -75,7 +75,7 @@
                   <li>
                     <nuxt-link
                       class="dropdown-item"
-                      :to="localePath(`/visitor-doctors`)"
+                     /to="/"
                       exact
                       >{{ $t('menu.visitor_doctors') }}
                     </nuxt-link>
@@ -87,7 +87,7 @@
                 <nuxt-link
                   id="navbarDropdownMenuLink"
                   class="menu__link nav-link"
-                  :to="localePath('/services')"
+                  to="/"
                   exact
                 >
                   {{ $t('menu.services') }}
@@ -98,7 +98,7 @@
                 <nuxt-link
                   id="navbarDropdownMenuLink"
                   class="menu__link nav-link"
-                  :to="offersLink"
+                 to="/"
                   exact
                 >
                   {{ $t('menu.offers') }}
@@ -109,7 +109,7 @@
                 <nuxt-link
                   v-if="$i18n.locale == 'ar'"
                   class="menu__link nav-link"
-                  :to="localePath(`/${encodeURI('المدونة')}`)"
+                 to="/"
                   exact
                   >{{ $t('menu.blog') }}</nuxt-link
                 >
@@ -126,20 +126,12 @@
               </li>
 
               <li class="menu__item nav-item">
-                <nuxt-link class="menu__link nav-link" :to="contactLink" exact>
+                <nuxt-link class="menu__link nav-link" to="/" exact>
                   {{ $t('contactUs') }}
                 </nuxt-link>
               </li>
 
-              <li class="menu__item nav-item">
-                <nuxt-link
-                  :to="$i18n.locale === 'en' ? '/en/risk' : '/risk'"
-                  class="menu__link nav-link"
-                  exact
-                >
-                  {{ $t('risk.header_title') }}
-                </nuxt-link>
-              </li>
+            
             </ul>
 
             <SocialMedia />
