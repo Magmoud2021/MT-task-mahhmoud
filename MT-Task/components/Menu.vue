@@ -3,7 +3,7 @@
     <div class="menu__container container">
       <nav class="navbar navbar-expand-lg p-0">
         <div class="menu__containerFluid container-fluid">
-          <nuxt-link :to="localePath('/')"
+          <nuxt-link to="/"
             ><img
               src="~/assets/images/logo/logo.webp"
               alt="logo"
@@ -75,7 +75,7 @@
                   <li>
                     <nuxt-link
                       class="dropdown-item"
-                     /to="/"
+                     to="/"
                       exact
                       >{{ $t('menu.visitor_doctors') }}
                     </nuxt-link>
