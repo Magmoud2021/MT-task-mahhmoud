@@ -62,7 +62,11 @@ axios: { baseURL: process.env.API_URL, proxy: true },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    '~/components',
+    '~/components/unit',
+  
+],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [

@@ -74,7 +74,7 @@
                 class="lang__text dico__line"
               >
                 <img
-                  src="/assets/images/lang-flags/ic_langauge.png"
+                  src="~/assets/images/lang-flags/ic_langauge.png"
                   alt="Language Flag"
                 />
 
@@ -94,7 +94,7 @@
 
 <script>
 import { fetchStore } from '~/mixin/fetchStore'
-
+import "bootstrap/dist/css/bootstrap.css";
 export default {
   name: 'Header',
   mixins: [
