@@ -8,7 +8,7 @@
               src="~/assets/images/logo/logo.webp"
               alt="logo"
               class="menu__logo"
-          ></nuxt-link>
+          /></nuxt-link>
 
           <button
             class="menu__mobileBtn navbar-toggler"
@@ -31,19 +31,18 @@
             <ul class="navbar-nav">
               <li class="menu__item nav-item">
                 <nuxt-link class="menu__link nav-link" to="/" exact>
-                  {{ $t('about_us') }}
-
+                  {{ $t("about_us") }}
                 </nuxt-link>
               </li>
 
               <li class="menu__item nav-item">
                 <nuxt-link
                   class="menu__link nav-link"
-                  :to="localePath('/hospitals')"
+                  to="/"
                   exact
                   role="button"
                 >
-                  {{ $t('menu.hospitals') }}
+                  {{ $t("menu.hospitals") }}
                 </nuxt-link>
               </li>
 
@@ -57,7 +56,7 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  {{ $t('menu.doctors') }}
+                  {{ $t("menu.doctors") }}
                 </nuxt-link>
 
                 <ul
@@ -65,20 +64,14 @@
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <li>
-                    <nuxt-link
-                      class="dropdown-item"
-                     to="/"
-                      exact
-                      >{{ $t('menu.andalusia_doctors') }}
+                    <nuxt-link class="dropdown-item" to="/" exact
+                      >{{ $t("menu.andalusia_doctors") }}
                     </nuxt-link>
                   </li>
 
                   <li>
-                    <nuxt-link
-                      class="dropdown-item"
-                   to="/"
-                      exact
-                      >{{ $t('menu.visitor_doctors') }}
+                    <nuxt-link class="dropdown-item" to="/" exact
+                      >{{ $t("menu.visitor_doctors") }}
                     </nuxt-link>
                   </li>
                 </ul>
@@ -91,7 +84,7 @@
                   to="/"
                   exact
                 >
-                  {{ $t('menu.services') }}
+                  {{ $t("menu.services") }}
                 </nuxt-link>
               </li>
 
@@ -102,7 +95,7 @@
                   to="/"
                   exact
                 >
-                  {{ $t('menu.offers') }}
+                  {{ $t("menu.offers") }}
                 </nuxt-link>
               </li>
 
@@ -110,9 +103,9 @@
                 <nuxt-link
                   v-if="$i18n.locale == 'ar'"
                   class="menu__link nav-link"
-                 to="/"
+                  to="/"
                   exact
-                  >{{ $t('menu.blog') }}</nuxt-link
+                  >{{ $t("menu.blog") }}</nuxt-link
                 >
               </li>
 
@@ -122,17 +115,15 @@
                   class="menu__link nav-link"
                   to="/"
                   exact
-                  >{{ $t('events') }}
+                  >{{ $t("events") }}
                 </nuxt-link>
               </li>
 
               <li class="menu__item nav-item">
                 <nuxt-link class="menu__link nav-link" to="/" exact>
-                  {{ $t('contactUs') }}
+                  {{ $t("contactUs") }}
                 </nuxt-link>
               </li>
-
-          
             </ul>
 
             <SocialMedia />
@@ -145,29 +136,29 @@
 
 <script>
 export default {
-  name: 'Menu',
+  name: "Menu",
   computed: {
     aboutLink() {
-      return this.$i18n.locale === 'en' ? '/en/about_us' : encodeURI('/من-نحن')
+      return this.$i18n.locale === "en" ? "/en/about_us" : encodeURI("/من-نحن");
     },
     contactLink() {
-      return this.$i18n.locale === 'en'
-        ? '/en/contact-us'
-        : encodeURI('/اتصل-بنا')
+      return this.$i18n.locale === "en"
+        ? "/en/contact-us"
+        : encodeURI("/اتصل-بنا");
     },
     offersLink() {
-      return this.$i18n.locale === 'en' ? '/en/offers' : encodeURI('/العروض')
+      return this.$i18n.locale === "en" ? "/en/offers" : encodeURI("/العروض");
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
-@import '~assets/css/var.scss';
+@import "~assets/css/var.scss";
 
 // stylelint-disable no-descending-specificity
 .menu {
-  border-top: 2px solid rgba(19, 67, 142, 0.5);;
+  border-top: 2px solid rgba(19, 67, 142, 0.5);
   padding: 5px 0;
 
   &__container,
@@ -203,7 +194,7 @@ export default {
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 18%;
       right: 0;
@@ -231,7 +222,7 @@ export default {
           display: none;
         }
 
-        [class*='__link'] {
+        [class*="__link"] {
           padding-right: 0 !important;
         }
       }

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 import FixedMenu from '~/components/FixedMenu.vue';
 import Menu from '~/components/Menu.vue';
 export default {

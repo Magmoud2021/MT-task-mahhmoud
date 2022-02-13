@@ -26,7 +26,7 @@
           "
         >
           <div class="right d-flex align-items-center">
-            <Btn :text="$t('mtPrograms')" :url="localePath('/mt-programs')" />
+            <Btn :text="$t('mtPrograms')" url="localePath('/mt-programs')" />
 
 
             <form v-if="showForm" @submit.prevent="searchSubmit">
