@@ -38,7 +38,7 @@
               <li class="menu__item nav-item">
                 <nuxt-link
                   class="menu__link nav-link"
-                  to="/"
+                  :to="localePath('/hospitals')"
                   exact
                   role="button"
                 >

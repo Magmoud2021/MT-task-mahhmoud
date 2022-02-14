@@ -1,6 +1,6 @@
 <template>
   <div class="col-lg-4 col-md-6 col-12 mb-4">
-    <nuxt-link to="/hospitals">
+    <nuxt-link :to="localePath(`/hospitals/${clinic.slug}`)">
       <div class="clinic_unit">
         <img
           :src="clinic.photo"
@@ -33,7 +33,7 @@ export default {
   },
   props: {
     clinic: {
-      
+
       type: Object,
       default: null,
     },
